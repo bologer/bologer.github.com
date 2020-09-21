@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Documentation Folder</title>
+    <title>Get Started</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script>
     <link type="text/css" rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
@@ -15,13 +14,23 @@
     </div>
     <div class="content">
         <div class="content-inner">
-            <h1>Documentation Folder</h1>
-<p>Your source directory is where you write your documentation.</p>
-<p>You can put as many file as you would like and in whatever order. </p>
-<blockquote>
-<p>Notice, if you would like to have specific ordering, please ready &quot;Hierarchy&quot; section for details.</p>
-</blockquote>
-<p>At this point of time, library supports only Markdown files (<code>.md</code> extension).</p>
+            <h1>Get Started</h1>
+<h2>Goal</h2>
+<p>You may say that this is yet another documentation generation project. Yes it is, but it is much simpler and
+lightweight then what you've seen before.</p>
+<p>I find it very frustrating to have so many versions of tools to build great documentation, but all of them are
+difficult to use, SaaS projects, lack functionallity, etc. </p>
+<p>What do we care the most when we write documentation? </p>
+<ul>
+<li>you want it to be easily readable</li>
+<li>you want to have code highlighting</li>
+<li>you want it to looks good (visually)</li>
+</ul>
+<p>Alright, writing is already hard, but why do you have to care about the rest?</p>
+<p>So I decided to create this project to simplify the process of writing documentation. So developer, can focus on
+writing good documentation and this tool to do the rest. </p>
+<p>The idea is that you use this as a library, configure it to you needs and use a CLI tool to build documentation. </p>
+<p>You can easily pack generated content and put it to public domain. </p>
         </div>
     </div>
 </div>
@@ -64,9 +73,6 @@
                 node.appendChild(linkNode);
             }
         });
-
-        console.log(list);
-
 
         if (list.length > 0) {
             var ul = document.createElement('ul');

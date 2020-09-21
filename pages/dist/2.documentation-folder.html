@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hierarchy</title>
+    <title>Documentation Folder</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script>
     <link type="text/css" rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
@@ -15,20 +14,23 @@
     </div>
     <div class="content">
         <div class="content-inner">
-            <h1>Hierarchy</h1>
-<p>The main idea is that you need to prefix your files to ensure correct ordering. </p>
-<p>The prefix can be anything, you can prefix it as <code>1.</code> or <code>1-</code> or <code>1.1.1</code>.</p>
-<p>Let's see the following example: </p>
-<pre><code>2. intro.md
-1. other-file.md</code></pre>
-<p>The list of files above would produce the following order:</p>
-<pre><code>1. other-file.html
-2. intro.html</code></pre>
-<p>Notice how <code>other-file.md</code> moved to the top of the list as it had <code>1.</code> which is smaller then <code>2.</code>.</p>
+            <h1>Documentation Folder</h1>
+<p>Your source directory is where you write your documentation.</p>
+<p>You can put as many file as you would like and in whatever order. </p>
+<blockquote>
+<p>Notice, if you would like to have specific ordering, please ready &quot;Hierarchy&quot; section for details.</p>
+</blockquote>
+<p>At this point of time, library supports only Markdown files (<code>.md</code> extension).</p>
         </div>
     </div>
 </div>
 <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
     document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelectorAll('pre code').forEach((block) => {
             hljs.highlightBlock(block);
@@ -67,9 +69,6 @@
                 node.appendChild(linkNode);
             }
         });
-
-        console.log(list);
-
 
         if (list.length > 0) {
             var ul = document.createElement('ul');

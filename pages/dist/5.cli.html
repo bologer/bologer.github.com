@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLI Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div class="pages">
+    <div class="table-of-contents">
+        <ul><li data-depth="1"><a href="1.intro.html">Get Started</a></li><li data-depth="1"><a href="2.documentation-folder.html">Documentation Folder</a></li><li data-depth="1"><a href="3.hierarchy.html">Hierarchy</a></li><li data-depth="1"><a href="4.page-details.html">Page Details</a></li><li data-depth="1"><a href="5.cli.html">CLI Tool</a></li></ul>
+    </div>
+    <div class="content">
+        <div class="content-inner">
+            <h1>CLI Tool</h1>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs-dir</code></td>
+<td>Absolute directory to documentation folder to be processed.</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>dist-dir</code></td>
+<td>Absolute directory where to put generated files.</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><code>code-highlight-languages</code></td>
+<td>CSV list of languages available for highlight, e.g. html,php,javascript. See <a href="https://highlightjs.org/usage/">https://highlightjs.org/usage/</a> for details.</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+<script>
+
+    initTableOfContents();
+
+    function initTableOfContents() {
+        var nodes = document.querySelector('.content-inner').querySelectorAll('h2,h3');
+        var tableOfContentsNode = document.getElementById('table-of-contents');
+
+        generateTableOfContents(nodes, tableOfContentsNode);
+    }
+
+    function generateTableOfContents(nodes, tableOfContentsNode) {
+        var list = [];
+
+        nodes.forEach(function (node) {
+            let headerText = node.innerText.trim();
+
+            if (headerText) {
+                let linkNode = document.createElement('a');
+                var headerId = generateHash(headerText);
+
+                linkNode.href = '#' + headerId;
+                linkNode.innerText = '#';
+
+                node.innerHTML = headerText + '&nbsp;';
+
+                list.push({text: headerText, url: '#' + headerId, tagName: node.tagName});
+
+                node.setAttribute('id', headerId);
+                node.appendChild(linkNode);
+            }
+        });
+
+        if (list.length > 0) {
+            var ul = document.createElement('ul');
+            list.forEach(function (item) {
+
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+
+                a.href = item.url;
+                a.innerText = item.text;
+
+                li.appendChild(a)
+
+                ul.appendChild(li);
+            });
+
+            tableOfContentsNode.append(ul);
+        } else {
+            tableOfContentsNode.style.display = 'none';
+        }
+    }
+
+    function generateHash(text) {
+        var normalizeText = text;
+        normalizeText = normalizeText
+            .trim()
+            .replace(/\s{2,}/gi, ' ')
+            .replace(/[.,\/#!$?%\^&\*;:{}=\-_`'"~()]/g, '')
+            .replace(/\s/gi, '-');
+
+        normalizeText = normalizeText.toLowerCase();
+
+        return normalizeText;
+    }
+</script>
+</body>
+</html>

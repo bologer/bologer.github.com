@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/php.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/javascript.min.js"></script><script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/markdown.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div class="pages">
+    <div class="table-of-contents">
+        <ul><li data-depth="1"><a href="1.intro.html">Get Started</a></li><li data-depth="1"><a href="2.documentation-folder.html">Documentation Folder</a></li><li data-depth="1"><a href="3.hierarchy.html">Hierarchy</a></li><li data-depth="1"><a href="4.page-details.html">Page Details</a></li><li data-depth="1"><a href="5.cli.html">CLI Tool</a></li></ul>
+    </div>
+    <div class="content">
+        <div class="content-inner">
+            <h1>Hierarchy</h1>
+<p>The main idea is that you need to prefix your files to ensure correct ordering. </p>
+<p>By default, the prefix is a number with a &quot;.&quot; after it. For example, <code>1.</code> or <code>1.1.1</code>.</p>
+<p>Let's see the following example: </p>
+<pre><code>2. intro.md
+1. other-file.md</code></pre>
+<p>The list of files above would produce the following order:</p>
+<pre><code>1. other-file.html
+2. intro.html</code></pre>
+<p>Notice how <code>other-file.md</code> moved to the top of the list as it had <code>1.</code> which is smaller then <code>2.</code>.</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script><script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+<script>
+
+    initTableOfContents();
+
+    function initTableOfContents() {
+        var nodes = document.querySelector('.content-inner').querySelectorAll('h2,h3');
+        var tableOfContentsNode = document.getElementById('table-of-contents');
+
+        generateTableOfContents(nodes, tableOfContentsNode);
+    }
+
+    function generateTableOfContents(nodes, tableOfContentsNode) {
+        var list = [];
+
+        nodes.forEach(function (node) {
+            let headerText = node.innerText.trim();
+
+            if (headerText) {
+                let linkNode = document.createElement('a');
+                var headerId = generateHash(headerText);
+
+                linkNode.href = '#' + headerId;
+                linkNode.innerText = '#';
+
+                node.innerHTML = headerText + '&nbsp;';
+
+                list.push({text: headerText, url: '#' + headerId, tagName: node.tagName});
+
+                node.setAttribute('id', headerId);
+                node.appendChild(linkNode);
+            }
+        });
+
+        if (list.length > 0) {
+            var ul = document.createElement('ul');
+            list.forEach(function (item) {
+
+                var li = document.createElement('li');
+                var a = document.createElement('a');
+
+                a.href = item.url;
+                a.innerText = item.text;
+
+                li.appendChild(a)
+
+                ul.appendChild(li);
+            });
+
+            tableOfContentsNode.append(ul);
+        } else {
+            tableOfContentsNode.style.display = 'none';
+        }
+    }
+
+    function generateHash(text) {
+        var normalizeText = text;
+        normalizeText = normalizeText
+            .trim()
+            .replace(/\s{2,}/gi, ' ')
+            .replace(/[.,\/#!$?%\^&\*;:{}=\-_`'"~()]/g, '')
+            .replace(/\s/gi, '-');
+
+        normalizeText = normalizeText.toLowerCase();
+
+        return normalizeText;
+    }
+</script>
+</body>
+</html>
