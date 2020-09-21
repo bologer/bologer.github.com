@@ -1,0 +1,19 @@
+{
+  "name": "bologer/pages.github.com",
+  "description": "Documentation",
+  "type": "library",
+  "authors": [
+    {
+      "name": "alex",
+      "email": "sasha.tesh@gmail.com"
+    }
+  ],
+  "scripts": {
+    "build-docs": "php vendor/bin/pages.php --docs-dir=$(PWD)/docs-src --dist-dir=$(PWD)/docs --plugins=code --code-highlight-languages=html,php,javascript,markdown"
+  },
+  "require": {
+    "bologer/pages": "0.1"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
