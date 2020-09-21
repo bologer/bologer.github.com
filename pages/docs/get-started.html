@@ -15,6 +15,28 @@
     <div class="content">
         <div class="content-inner">
             <h1>Get Started</h1>
+<p>Pages is a lightweight PHP utility to build documentation. </p>
+<p>You may use CLI utility or require library files in your project.</p>
+<p>You may run it as console job: </p>
+<pre><code>php vendor/bin/parser.php \
+    --docs-dir=/path/to/docs
+    --dist-dir=/path/to/dist 
+    --code-highlight-languages=php,javascript
+    --plugins=code</code></pre>
+<p>Or put it directly in your project:</p>
+<pre><code class="language-php">use Bologer\Pages;
+use Bologer\Config;
+
+$config = new Config();
+$config-&gt;docsFolder = __DIR__ . '/docs';
+$config-&gt;distFolder = __DIR__ . '/dist';
+$config-&gt;codeHighlightLanguages = ['html', 'php', 'javascript'];
+$config-&gt;plugin = ['code'];
+$pages = new Pages($config);
+$pages-&gt;build();</code></pre>
+<h2>Installing Pages</h2>
+<p>The recommended way to install Pages is through Composer.</p>
+<pre><code>composer require bologer/pages</code></pre>
 <h2>Goal</h2>
 <p>You may say that this is yet another utility which builds documentation. Yes it is, but it is much simpler and
 lightweight then what you've seen before.</p>
