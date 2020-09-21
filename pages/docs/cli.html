@@ -21,6 +21,7 @@
 <th>Parameter</th>
 <th>Description</th>
 <th>Required</th>
+<th>Default</th>
 </tr>
 </thead>
 <tbody>
@@ -28,16 +29,25 @@
 <td><code>docs-dir</code></td>
 <td>Absolute directory to documentation folder to be processed.</td>
 <td>yes</td>
+<td></td>
 </tr>
 <tr>
 <td><code>dist-dir</code></td>
 <td>Absolute directory where to put generated files.</td>
 <td>yes</td>
+<td></td>
 </tr>
 <tr>
 <td><code>code-highlight-languages</code></td>
 <td>CSV list of languages available for highlight, e.g. html,php,javascript. See <a href="https://highlightjs.org/usage/">https://highlightjs.org/usage/</a> for details.</td>
 <td>no</td>
+<td></td>
+</tr>
+<tr>
+<td><code>plugins</code></td>
+<td>CSV list of plugins to be loaded. Available options: code.</td>
+<td>no</td>
+<td><code>code</code></td>
 </tr>
 </tbody>
 </table>

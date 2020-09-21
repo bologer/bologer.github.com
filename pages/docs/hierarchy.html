@@ -18,12 +18,15 @@
 <p>The main idea is that you need to prefix your files to ensure correct ordering. </p>
 <p>By default, the prefix is a number with a &quot;.&quot; after it. For example, <code>1.</code> or <code>1.1.1</code>.</p>
 <p>Let's see the following example: </p>
-<pre><code>2. intro.md
-1. other-file.md</code></pre>
+<pre><code>2. three.md
+1.1. two.md
+1. one.md</code></pre>
 <p>The list of files above would produce the following order:</p>
-<pre><code>1. other-file.html
-2. intro.html</code></pre>
-<p>Notice how <code>other-file.md</code> moved to the top of the list as it had <code>1.</code> which is smaller then <code>2.</code>.</p>
+<pre><code>one.html
+two.html 
+three.html</code></pre>
+<p>Notice how <code>one.md</code> moved to the top of the list, <code>two.md</code> follows it.</p>
+<p>This is because <code>1.</code> and <code>1.1</code> is smaller then <code>2.</code></p>
         </div>
     </div>
 </div>
